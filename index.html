@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apoie o Meio Ambiente</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e0f7ec;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+    .container {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 450px;
+      text-align: center;
+    }
+    h1 {
+      color: #2e7d32;
+    }
+    p.description {
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .pix-key {
+      background: #f1f1f1;
+      padding: 10px;
+      border-radius: 8px;
+      margin: 10px 0;
+      font-size: 14px;
+      word-break: break-all;
+    }
+    button {
+      padding: 10px 20px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    img.qr {
+      width: 200px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Ajude o Meio Ambiente!</h1>
+    <p class="description">
+      Sua contribuição faz a diferença! 🌍 Estamos reunindo apoio para projetos de reflorestamento,
+      limpeza de áreas naturais e educação ambiental. Cada doação nos ajuda a proteger a natureza e
+      inspirar mais pessoas a fazer o mesmo. 🍃
+    </p>
+
+    <p>Faça um Pix usando o código abaixo:</p>
+    <div class="pix-key" id="pixKey">
+      00020126580014br.gov.bcb.pix01368323502d-69ae-47c3-9034-814c50b3a6955204000053039865802BR5925Rafael Jose Do Nascimento6009Sao Paulo62290525REC683BB7D9D59E79470653026304F964
+    </div>
+    <button onclick="copyPixKey()">Copiar chave Pix</button>
+
+    <p>Ou escaneie o QR Code abaixo:</p>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=00020126580014br.gov.bcb.pix01368323502d-69ae-47c3-9034-814c50b3a6955204000053039865802BR5925Rafael%20Jose%20Do%20Nascimento6009Sao%20Paulo62290525REC683BB7D9D59E79470653026304F964" alt="QR Code" class="qr">
+  </div>
+
+  <script>
+    function copyPixKey() {
+      const pixKey = document.getElementById('pixKey').innerText;
+      navigator.clipboard.writeText(pixKey).then(() => {
+        alert('Chave Pix copiada com sucesso!');
+      });
+    }
+  </script>
+</body>
+</html>
